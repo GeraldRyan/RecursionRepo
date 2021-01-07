@@ -43,7 +43,7 @@ int addLevel(Node *node)
 
 // };
 
-int make_tree(void)
+Tree* make_tree(void)
 {
 
   // set up tree
@@ -60,12 +60,6 @@ int make_tree(void)
   addLevel(root->right->left);
   addLevel(root->right->right);
 
-
-
-
-
-
-
   Node *rootl = root->left;
   Node *rootr = root->right;
 
@@ -77,5 +71,5 @@ int make_tree(void)
   //   rootr = rootr->right; // problem, missing inner nodes. An outer shell tree
   // }
 
-  return 0;
+  return tree;
 }
