@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 int tree_values[] = {11, 71, 35, 85, 34, 26, 48, 95, 57, 82, 15, 35};
 
 typedef struct Node
@@ -42,12 +41,10 @@ int addLevel(Node *node)
   node->right = create_new_node(node->value + 2);
 }
 
-int insert_node_binary_tree(struct Tree* tree, int value){
+int insert_node_binary_tree(struct Tree *tree, int value)
+{
 
-  Node* new_node = create_new_node(value);
-
-
-
+  Node *new_node = create_new_node(value);
 
   return 1;
 }
@@ -56,17 +53,33 @@ int insert_node_binary_tree(struct Tree* tree, int value){
 
 // };
 
-Tree* make_tree(int* values)
+Tree *make_tree(int *values)
 {
 
   // set up tree
   int newlevels = 2;
   Tree *tree = malloc(sizeof(Tree));
-  Node* root = create_new_node(50);
+  Node *root = create_new_node(50);
   tree->root = root;
   tree->numNodes++;
 
-  for (int i )
+  for (int i = 0; i < tree_values[0]; i++)
+  { // 11 times
+    int val = tree_values[i+1];
+    Node* node = tree->root;
+    while (node != NULL){
+      if (val <= node->value){
+        // place on left
+        
+      }
+      else if (val > node->value){
+
+      }
+
+    }
+   
+
+  }
 
   // addLevel(root);
   // addLevel(root->left);
